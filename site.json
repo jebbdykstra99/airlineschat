@@ -1,0 +1,323 @@
+{
+  "siteId": "airlineschat",
+  "roomNumber": 18,
+  "redditSr": "airlineschat",
+  "name": "airlineschat",
+  "tagline": "Airline issue-resolution. Delays, bags, refunds — not official support.",
+  "composePlaceholder": "What went wrong — delay, bags, refund, rebook?",
+  "emptyState": "Pick a carrier nest or share your region. Unofficial traveler chatter — not airline support. Sign in to post. Guest can browse. Preview.",
+  "preview": true,
+  "noindex": true,
+  "domain": "airlineschat.com",
+  "earlyWelcome": false,
+  "dms": false,
+  "robots": "noindex, nofollow",
+  "honesty": "Unofficial traveler room · not airline customer service · not a booking site · preview",
+  "trustBlurb": "Unofficial issue-resolution chatter. Not affiliated with any airline. Guest can browse. Preview.",
+  "exploreExplainer": "Browse carrier nests by region. Follow issue tags like #delay #bags #refund. This room does not rebook flights or process claims.",
+  "locationGate": {
+    "enabled": true,
+    "prompt": "Where are you flying from? We'll surface carriers for your region.",
+    "fields": [
+      "city",
+      "zip"
+    ],
+    "geolocationOptIn": true,
+    "regionOptional": true
+  },
+  "stories": {
+    "enabled": true,
+    "maxSeconds": 15,
+    "maxBytes": 8000000
+  },
+  "theme": {
+    "bg": "#f0f4f8",
+    "surface": "#ffffff",
+    "nav-bg": "#0a1f3d",
+    "nav-text": "#8fadc8",
+    "nav-hover": "#e6eef6",
+    "nav-active": "#f0f4f8",
+    "text": "#12233a",
+    "text-muted": "#5c7088",
+    "text-light": "#7a90a8",
+    "accent": "#1e88e5",
+    "accent-dark": "#1565c0",
+    "teal": "#0288d1",
+    "silver": "#b8c8d8",
+    "border": "#d0dce8",
+    "avatarColors": [
+      "#0a1f3d",
+      "#1e88e5",
+      "#0288d1",
+      "#1565c0",
+      "#3d5a80",
+      "#ee6c4d"
+    ]
+  },
+  "nests": [
+    {
+      "slug": "american",
+      "label": "American Airlines",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "AA — delays, bags, AAdvantage, irrops.",
+      "nav": true,
+      "region": "us"
+    },
+    {
+      "slug": "delta",
+      "label": "Delta Air Lines",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "DL — SkyMiles, connections, rebooking chatter.",
+      "nav": true,
+      "region": "us"
+    },
+    {
+      "slug": "united",
+      "label": "United Airlines",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "UA — MileagePlus, irregular ops, seats.",
+      "nav": true,
+      "region": "us"
+    },
+    {
+      "slug": "southwest",
+      "label": "Southwest Airlines",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "WN — bags fly free talk, Rapid Rewards, schedule.",
+      "nav": true,
+      "region": "us"
+    },
+    {
+      "slug": "jetblue",
+      "label": "JetBlue",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "B6 — TrueBlue, Mint, northeast corridors.",
+      "nav": true,
+      "region": "us"
+    },
+    {
+      "slug": "alaska",
+      "label": "Alaska Airlines",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "AS — Mileage Plan, West Coast / Hawaii.",
+      "nav": true,
+      "region": "us"
+    },
+    {
+      "slug": "spirit",
+      "label": "Spirit Airlines",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "NK — ultra-low-cost fees and schedule (optional chip).",
+      "nav": true,
+      "region": "us"
+    },
+    {
+      "slug": "british-airways",
+      "label": "British Airways",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "BA — Avios, Heathrow, long-haul EU starter.",
+      "nav": true,
+      "region": "europe"
+    },
+    {
+      "slug": "air-france",
+      "label": "Air France",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "AF — Flying Blue, CDG, Schengen / long-haul.",
+      "nav": true,
+      "region": "europe"
+    },
+    {
+      "slug": "lufthansa",
+      "label": "Lufthansa",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "LH — Miles & More, FRA/MUC hub chatter.",
+      "nav": true,
+      "region": "europe"
+    },
+    {
+      "slug": "ana",
+      "label": "ANA",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "NH — Mileage Club, Tokyo hubs, Asia starter.",
+      "nav": true,
+      "region": "asia"
+    },
+    {
+      "slug": "singapore",
+      "label": "Singapore Airlines",
+      "parent": null,
+      "kind": "carrier",
+      "blurb": "SQ — KrisFlyer, Changi, premium long-haul.",
+      "nav": true,
+      "region": "asia"
+    }
+  ],
+  "directory": {
+    "note": "Carrier nests only — no official claim portals seeded yet. Outbound FACT links later. SAVE LINKS NOT CONTENT.",
+    "regions": {
+      "us": {
+        "label": "United States",
+        "carriers": [
+          "american",
+          "delta",
+          "united",
+          "southwest",
+          "jetblue",
+          "alaska",
+          "spirit"
+        ]
+      },
+      "europe": {
+        "label": "Europe",
+        "carriers": [
+          "british-airways",
+          "air-france",
+          "lufthansa"
+        ]
+      },
+      "asia": {
+        "label": "Asia",
+        "carriers": [
+          "ana",
+          "singapore"
+        ]
+      }
+    }
+  },
+  "taxonomy": {
+    "version": 1,
+    "name": "Airline issues",
+    "symbolPrefix": "$",
+    "topics": [
+      {
+        "id": "delay",
+        "label": "#delay",
+        "kind": "issue",
+        "blurb": "Schedule slips",
+        "followDefault": true,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "bags",
+        "label": "#bags",
+        "kind": "issue",
+        "blurb": "Checked / mishandled",
+        "followDefault": true,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "refund",
+        "label": "#refund",
+        "kind": "issue",
+        "blurb": "Money back",
+        "followDefault": true,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "rebook",
+        "label": "#rebook",
+        "kind": "issue",
+        "blurb": "Same-day / IRROPS",
+        "followDefault": true,
+        "adminSeed": true,
+        "status": "active"
+      },
+      {
+        "id": "irrops",
+        "label": "#irrops",
+        "kind": "issue",
+        "blurb": "Irregular operations",
+        "followDefault": false,
+        "adminSeed": true,
+        "status": "active"
+      }
+    ],
+    "defaultWatchlist": [
+      "delay",
+      "bags",
+      "refund",
+      "rebook"
+    ],
+    "notes": "Followable issue tags + carrier symbols. Not official airline support."
+  },
+  "trends": [],
+  "outbound": [],
+  "sessionSeeds": [],
+  "rail": {
+    "kind": "outbound",
+    "title": "Room Brief",
+    "kicker": "Preview",
+    "maxCards": 3,
+    "meta": "Unofficial · not airline support · preview · noindex",
+    "footer": "Unofficial traveler room. We do not rebook, refund, or speak for any carrier. Official airline channels stay outbound.",
+    "fact": {
+      "tag": "FACT",
+      "headline": "Not official airline support.",
+      "body": "airlineschat is traveler-to-traveler chatter about delays, bags, refunds, and rebooking. For ticket changes, claims, or compensation, use the airline's official app, website, or airport desk. EU261 / US DOT rules are public law — this room is not counsel."
+    },
+    "outbound": [
+      {
+        "tag": "Rights",
+        "headline": "US DOT airline passenger rights",
+        "url": "https://www.transportation.gov/airconsumer",
+        "snippet": "Official US Department of Transportation consumer page — refunds, delays, tarmac, disabilities. Outbound only.",
+        "meta": "Official · verified 2026-09-26"
+      },
+      {
+        "tag": "EU",
+        "headline": "EU air passenger rights (overview)",
+        "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm",
+        "snippet": "Your Europe overview of Regulation 261/2004-style rights. Not legal advice; check the airline and national body.",
+        "meta": "Official · verified 2026-09-26"
+      },
+      {
+        "tag": "Tips",
+        "headline": "Keep PNR + photos before you post",
+        "url": "https://www.transportation.gov/airconsumer",
+        "snippet": "Strong traveler notes include confirmation code, flight number, timestamps, and bag tag photos. Never paste full payment card data in the room.",
+        "meta": "Best practice · preview"
+      }
+    ],
+    "porch": {
+      "prompt": "What should travelers try first?",
+      "options": [
+        "Airline app / desk",
+        "DOT / EU rights page",
+        "Post in the room"
+      ],
+      "dwellMs": 9000
+    },
+    "overlay": {
+      "enabled": true,
+      "ms": 7000,
+      "headline": "Not official airline support.",
+      "links": [
+        {
+          "label": "US DOT passenger rights",
+          "url": "https://www.transportation.gov/airconsumer"
+        },
+        {
+          "label": "EU air passenger rights",
+          "url": "https://europa.eu/youreurope/citizens/travel/passenger-rights/air/index_en.htm"
+        }
+      ]
+    }
+  },
+  "v": 1,
+  "cacheBust": 1
+}
