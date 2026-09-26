@@ -58,110 +58,122 @@
     {
       "slug": "american",
       "label": "American Airlines",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
       "blurb": "AA — delays, bags, AAdvantage, irrops.",
-      "nav": true,
-      "region": "us"
+      "nav": true
     },
     {
       "slug": "delta",
       "label": "Delta Air Lines",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
       "blurb": "DL — SkyMiles, connections, rebooking chatter.",
-      "nav": true,
-      "region": "us"
+      "nav": true
     },
     {
       "slug": "united",
       "label": "United Airlines",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
       "blurb": "UA — MileagePlus, irregular ops, seats.",
-      "nav": true,
-      "region": "us"
+      "nav": true
     },
     {
       "slug": "southwest",
       "label": "Southwest Airlines",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
       "blurb": "WN — bags fly free talk, Rapid Rewards, schedule.",
-      "nav": true,
-      "region": "us"
+      "nav": true
     },
     {
       "slug": "jetblue",
       "label": "JetBlue",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
       "blurb": "B6 — TrueBlue, Mint, northeast corridors.",
-      "nav": true,
-      "region": "us"
+      "nav": true
     },
     {
       "slug": "alaska",
       "label": "Alaska Airlines",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
       "blurb": "AS — Mileage Plan, West Coast / Hawaii.",
-      "nav": true,
-      "region": "us"
+      "nav": true
     },
     {
       "slug": "spirit",
       "label": "Spirit Airlines",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
-      "blurb": "NK — ultra-low-cost fees and schedule (optional chip).",
-      "nav": true,
-      "region": "us"
+      "blurb": "NK — ultra-low-cost fees and schedule.",
+      "nav": true
+    },
+    {
+      "slug": "frontier",
+      "label": "Frontier Airlines",
+      "kind": "airline",
+      "parent": null,
+      "blurb": "F9 — ULCC fees, schedule, and go-wild chatter.",
+      "nav": true
+    },
+    {
+      "slug": "hawaiian",
+      "label": "Hawaiian Airlines",
+      "kind": "airline",
+      "parent": null,
+      "blurb": "HA — islands network, Alaska merger talk (cite).",
+      "nav": true
+    },
+    {
+      "slug": "allegiant",
+      "label": "Allegiant",
+      "kind": "airline",
+      "parent": null,
+      "blurb": "G4 — leisure routes and fee honesty.",
+      "nav": true
     },
     {
       "slug": "british-airways",
       "label": "British Airways",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
-      "blurb": "BA — Avios, Heathrow, long-haul EU starter.",
-      "nav": true,
-      "region": "europe"
+      "blurb": "BA — Avios, Heathrow, long-haul EU.",
+      "nav": false
     },
     {
       "slug": "air-france",
       "label": "Air France",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
-      "blurb": "AF — Flying Blue, CDG, Schengen / long-haul.",
-      "nav": true,
-      "region": "europe"
+      "blurb": "AF — Flying Blue, CDG.",
+      "nav": false
     },
     {
       "slug": "lufthansa",
       "label": "Lufthansa",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
-      "blurb": "LH — Miles & More, FRA/MUC hub chatter.",
-      "nav": true,
-      "region": "europe"
+      "blurb": "LH — Miles & More, FRA/MUC.",
+      "nav": false
     },
     {
       "slug": "ana",
       "label": "ANA",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
-      "blurb": "NH — Mileage Club, Tokyo hubs, Asia starter.",
-      "nav": true,
-      "region": "asia"
+      "blurb": "NH — Mileage Club, Tokyo hubs.",
+      "nav": false
     },
     {
       "slug": "singapore",
       "label": "Singapore Airlines",
+      "kind": "airline",
       "parent": null,
-      "kind": "carrier",
-      "blurb": "SQ — KrisFlyer, Changi, premium long-haul.",
-      "nav": true,
-      "region": "asia"
+      "blurb": "SQ — KrisFlyer, Changi.",
+      "nav": false
     }
   ],
   "directory": {
@@ -176,7 +188,10 @@
           "southwest",
           "jetblue",
           "alaska",
-          "spirit"
+          "spirit",
+          "frontier",
+          "hawaiian",
+          "allegiant"
         ]
       },
       "europe": {
@@ -319,5 +334,8 @@
     }
   },
   "v": 1,
-  "cacheBust": 1
+  "cacheBust": 2,
+  "nestCount": 10,
+  "leftNav": "US majors (10) nav:true; intl URL-only nav:false",
+  "lock": "2026-09-26 Jebb ASAP US majors"
 }

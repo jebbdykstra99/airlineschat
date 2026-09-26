@@ -151,7 +151,7 @@
   function renderPicks() {
     var host = $('nest-picks');
     if (!host) return;
-    host.innerHTML = nests().map(function (n) {
+    host.innerHTML = nests().filter(function (n) { return n && n.nav !== false; }).map(function (n) {
       var on = n.slug === activeSlug ? ' is-on' : '';
       return '<button type="button" class="nest-chip' + on + '" data-nest="' + escapeHtml(n.slug) + '">' +
         escapeHtml(n.label || n.slug) + '</button>';
