@@ -10,7 +10,7 @@
   "noindex": true,
   "domain": "airlineschat.com",
   "earlyWelcome": false,
-  "dms": false,
+  "dms": true,
   "robots": "noindex, nofollow",
   "honesty": "Unofficial traveler room · not airline customer service · not a booking site · preview",
   "trustBlurb": "Unofficial issue-resolution chatter. Not affiliated with any airline. Guest can browse. Preview.",
