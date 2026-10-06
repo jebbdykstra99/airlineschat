@@ -130,7 +130,6 @@
   <section class="page active" id="page-thoughts">
 
     <section class="city-gate" id="city-gate" aria-labelledby="city-gate-title">
-      <div class="city-gate-kicker">Non-emergency</div>
       <h2 class="city-gate-title" id="city-gate-title">Where are you?</h2>
       <p class="city-gate-prompt" id="city-gate-prompt">Where are you flying from? We'll surface carriers for your region.</p>
       <form class="city-gate-form" id="city-gate-form">
@@ -147,7 +146,6 @@
       </form>
       <p class="city-gate-note" id="city-gate-note">Location is optional. The button asks the browser. We do not guess from your network.</p>
       <div class="nest-picks" id="nest-picks"></div>
-      <p class="issue-label" id="issue-label" hidden>What is it? We do not file this. Your city does.</p>
       <div class="issue-picks" id="issue-picks" hidden></div>
       <div class="handoff" id="handoff" hidden></div>
     </section>
@@ -160,9 +158,9 @@
 
     <div class="thoughts-compose-wrap" id="thoughts-compose-wrap">
       <div class="thoughts-compose-row">
-        <div class="thoughts-compose-avatar" id="thoughts-compose-avatar">31</div>
+        <div class="thoughts-compose-avatar" id="thoughts-compose-avatar">AC</div>
         <div class="thoughts-compose-right">
-          <textarea class="thoughts-compose-input" id="thoughts-compose-input" placeholder="What needs fixing in your city?" rows="2" maxlength="280"></textarea>
+          <textarea class="thoughts-compose-input" id="thoughts-compose-input" placeholder="What went wrong — delay, bags, refund, rebook?" rows="2" maxlength="280"></textarea>
         </div>
       </div>
       <input type="file" id="compose-image-input" accept="image/*,.jpg,.jpeg,.png,.gif,.webp,.heic,.heif,.bmp" style="display:none">
@@ -243,7 +241,7 @@
     <div class="profile-id">
       <div class="profile-display-name" id="profile-display-name">Guest</div>
       <div class="profile-handle" id="profile-handle">@guestairlines</div>
-      <p class="profile-bio" id="profile-bio">Unofficial helper — not a substitute for 911.</p>
+      <p class="profile-bio" id="profile-bio">Unofficial issue-resolution chatter. Not affiliated with any airline.</p>
       <div class="profile-meta" id="profile-meta">airlineschat · preview room</div>
       <div class="profile-counts">
         <button type="button" class="count-btn" disabled><strong>—</strong> Following <span class="tab-soon">Soon</span></button>
@@ -311,7 +309,7 @@
   <div class="explore-search-wrap">
     <div class="explore-search-bar">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" class="explore-search-input" id="explore-search-input" placeholder="Search city nests…" autocomplete="off">
+      <input type="text" class="explore-search-input" id="explore-search-input" placeholder="Search carriers and topics…" autocomplete="off">
     </div>
   </div>
   <div class="explore-tabs thoughts-tabs">
@@ -330,7 +328,7 @@
   </div>
   <div class="right-panel-body" id="news-feed"></div>
   <div class="right-panel-footer">
-    <p>Official city channels live in the handoff cards. This room does not file the report.</p>
+    <p>Unofficial traveler room. We do not rebook, refund, or speak for any carrier. Official airline channels stay outbound.</p>
   </div>
 </aside>
 
@@ -345,7 +343,7 @@
   <div class="conv-modal">
     <button type="button" class="conv-modal-close" id="cv-modal-close" aria-label="Close sign in">&times;</button>
     <h2 id="auth-title">Join airlineschat</h2>
-    <p class="conv-modal-note">Email/password and Google on subx-skins. Guest is browse-only. Not a substitute for 911. Preview lock stays on.</p>
+    <p class="conv-modal-note">Unofficial issue-resolution chatter. Not affiliated with any airline. Guest can browse. Preview.</p>
     <div class="conv-modal-tabs">
       <button class="conv-modal-tab active" data-tab="login" type="button">Sign In</button>
       <button class="conv-modal-tab" data-tab="register" type="button">Register</button>
