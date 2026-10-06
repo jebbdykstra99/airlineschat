@@ -6,7 +6,7 @@
   const LS_LIKES = '311chat.likes';
   const SITE_JSON_URL = (document.currentScript && document.currentScript.getAttribute('data-site')) || 'site.json';
 
-  let SITE_ID = '311chat';
+  let SITE_ID = 'airlineschat';
   let site = null;
   let COLORS = ['#0b1c2c', '#1b6b73', '#c0362c', '#2a4a62', '#8a3b32', '#345c6e'];
   let TRENDS = [];
@@ -166,7 +166,7 @@
   var shareSheetPostId = null;
 
   function postPermalink(postId) {
-    var host = (location.hostname || '').replace(/^www\./i, '') || '311chat.com';
+    var host = (location.hostname || '').replace(/^www\./i, '') || 'airlineschat.com';
     return 'https://p.' + host + '/status/' + encodeURIComponent(String(postId || ''));
   }
 
@@ -416,8 +416,8 @@
 
   function applySiteChrome() {
     if (!site) return;
-    var title = site.name || "311chat";
-    var tag = site.tagline || 'Non-emergency city help. Find your 311.';
+    var title = site.name || "airlineschat";
+    var tag = site.tagline || 'Airline issue-resolution. Delays, bags, refunds — not official support.';
     document.title = tag ? (title + ' — ' + tag) : title;
     var brandTitle = document.querySelector('.brand-title');
     var brandSub = document.querySelector('.brand-sub');
@@ -431,7 +431,7 @@
     if (authTitle) authTitle.textContent = 'Join ' + title;
     var authNote = document.querySelector('#cv-auth-overlay .conv-modal-note');
     if (authNote) {
-      authNote.textContent = site.trustBlurb || ('Unofficial helper. Not a substitute for 911. Links to official city channels. Guest is browse-only. Preview.');
+      authNote.textContent = site.trustBlurb || 'Unofficial traveler room. Not airline customer service. Guest is browse-only. Preview.';
     }
     var input = document.getElementById('thoughts-compose-input');
     if (input && site.composePlaceholder) {
@@ -2870,7 +2870,7 @@
   }
 
   function dmSiteId() {
-    return SITE_ID || '311chat';
+    return SITE_ID || 'airlineschat';
   }
   function convIdFor(uidA, uidB) {
     return dmSiteId() + '__' + [String(uidA || ''), String(uidB || '')].sort().join('_');
@@ -3300,7 +3300,7 @@
       rows.sort(function (a, b) { return a.name.localeCompare(b.name); });
       if (!list) return;
       if (!rows.length) {
-        list.innerHTML = '<div class="soon-panel">No 311chat users yet.</div>';
+        list.innerHTML = '<div class="soon-panel">No one else in this room yet.</div>';
         return;
       }
       list.innerHTML = rows.map(function (u) {
@@ -3361,6 +3361,10 @@
     syncProfile();
   }
 
+  function fallbackBio() {
+    return (site && (site.trustBlurb || site.honesty)) || 'Unofficial traveler room. Not airline customer service.';
+  }
+
   function paintProfile(name, handle, bio, uid) {
     var top = document.getElementById('profile-topbar-name');
     if (top) top.textContent = name;
@@ -3376,7 +3380,7 @@
     if (!pane) return;
     const mine = livePosts.filter(function (p) { return p.authorUid && p.authorUid === uid; });
     if (!mine.length) {
-      pane.innerHTML = '<div class="empty-note" id="profile-posts-empty">No posts yet. Official 311 is the handoff at the top of Home. Sign in to talk with neighbors.</div>';
+      pane.innerHTML = '<div class="empty-note" id="profile-posts-empty">' + escapeHtml((site && site.emptyState) || 'No posts yet.') + '</div>';
     } else {
       pane.innerHTML = mine.map(function (p) { return renderPost(p, !!p.parentId); }).join('');
     }
@@ -3416,7 +3420,7 @@
     paintProfile(
       currentUser.name,
       currentUser.handle,
-      currentUser.bio || "Unofficial helper — not a substitute for 911.",
+      currentUser.bio || fallbackBio(),
       currentUser.uid
     );
   }
@@ -3638,8 +3642,8 @@
     var draft = peekCompose();
     currentUser = {
       name: name || 'Guest',
-      handle: (handle || 'guest311').replace(/^@/, '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 15) || 'guest311',
-      bio: "Unofficial helper — not a substitute for 911.",
+      handle: (handle || 'guest').replace(/^@/, '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 15) || 'guest',
+      bio: fallbackBio(),
       live: false
     };
     saveJSON(LS_USER, currentUser);
@@ -5265,8 +5269,8 @@
           el.hidden = false;
           el.innerHTML =
             '<button type="button" class="stories-item is-add" data-story-add="1" aria-label="Add story">' +
-              '<span class="stories-ring"><span class="stories-avatar" style="background:' + colorFor(SITE_ID || '311chat') + '">' +
-              escapeHtml(String(SITE_ID || '311chat').replace(/chat$/i, '').slice(0, 3).toUpperCase() || 'ME') + '</span>' +
+              '<span class="stories-ring"><span class="stories-avatar" style="background:' + colorFor(SITE_ID || 'airlineschat') + '">' +
+              escapeHtml(String(SITE_ID || 'airlineschat').replace(/chat$/i, '').slice(0, 3).toUpperCase() || 'ME') + '</span>' +
               '<span class="stories-add-badge">+</span></span>' +
               '<span class="stories-label">Add story</span></button>';
         },
@@ -5278,8 +5282,8 @@
               id: s.id || ('demo-' + i),
               siteId: SITE_ID,
               authorUid: s.authorUid || ('demo-' + i),
-              name: s.name || (site && site.name) || '311chat',
-              handle: s.handle || SITE_ID || '311chat',
+              name: s.name || (site && site.name) || 'airlineschat',
+              handle: s.handle || SITE_ID || 'airlineschat',
               type: s.type || 'text',
               text: s.text || '',
               mediaUrl: s.mediaUrl || '',
@@ -5387,6 +5391,6 @@
     .catch(function (e) {
       console.warn('site.json', e);
       composeErr((e && e.message) ? e.message : 'Could not load site.json');
-      boot({ siteId: "311chat", name: "311chat", tagline: "Non-emergency city help. Find your 311." });
+      boot({ siteId: "airlineschat", name: "airlineschat", tagline: "Airline issue-resolution. Delays, bags, refunds — not official support." });
     });
 })();
