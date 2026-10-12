@@ -2,7 +2,7 @@
   'use strict';
 
   var SITE_URL = (document.currentScript && document.currentScript.getAttribute('data-site')) || 'site.json';
-  var HONESTY = 'Unofficial helper · not a substitute for 911 · links to official city channels · preview';
+  var HONESTY = 'Unofficial traveler room · not airline customer service · not a booking site · preview';
   var MAX_KM = 100;
   var LS_NEST = '311chat.nest';
 
@@ -239,7 +239,7 @@
     }
     var slug = fromCity || fromZip;
     if (!slug) {
-      selectSlug('', 'No seed city matched. Pick one of the eight cities below.', true);
+      selectSlug('', 'No city or ZIP match in this preview. Pick a carrier below, or leave location blank.', true);
       return;
     }
     selectSlug(slug, '', false);
@@ -253,7 +253,7 @@
     navigator.geolocation.getCurrentPosition(function (pos) {
       var slug = nearestSlug(pos.coords.latitude, pos.coords.longitude);
       if (!slug) {
-        selectSlug('', 'That point is outside the eight preview cities. Type a city or pick one.', true);
+        selectSlug('', 'That point isn\'t near a place this preview can match. Type a city or pick a carrier.', true);
         return;
       }
       selectSlug(slug, 'Matched from the location you allowed. Nothing was read from the network.', false);
@@ -328,6 +328,6 @@
     })
     .then(boot)
     .catch(function () {
-      boot({ honesty: HONESTY, nests: [], directory: { cities: {} }, locationGate: { enabled: true, geolocationOptIn: true, prompt: "Where are you? We'll find your city's non-emergency 311." } });
+      boot({ honesty: HONESTY, nests: [], directory: { cities: {} }, locationGate: { enabled: true, geolocationOptIn: true, prompt: "Where are you flying from? We'll surface carriers for your region." } });
     });
 })();
