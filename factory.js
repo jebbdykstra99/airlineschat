@@ -4349,7 +4349,7 @@
         const pw = document.getElementById('cv-reg-pw').value || '';
         const age = document.getElementById('cv-reg-age');
         if (!age || !age.checked) {
-          err.textContent = 'Confirm you are 13 or older and agree to the preview Terms and Privacy pages.';
+          err.textContent = 'Confirm you are 18 or older and agree to the preview Terms and Privacy pages.';
           err.classList.add('show');
           return;
         }
@@ -4381,7 +4381,7 @@
       runWithAuth(err, function () {
       var age = document.getElementById('cv-google-age');
       if (!age || !age.checked) {
-        err.textContent = 'Confirm you are 13 or older and agree to the preview Terms and Privacy pages.';
+        err.textContent = 'Confirm you are 18 or older and agree to the preview Terms and Privacy pages.';
         err.classList.add('show');
         return;
       }
