@@ -1,0 +1,15 @@
+{
+  "factory": "jebbdykstra99/subx-factory",
+  "version": "v1.1.0",
+  "room": "airlineschat",
+  "siteId": "airlineschat",
+  "files": {
+    "factory.js": "7466eefc88f4103dcc159bcea5a788d35dc4b1402ffba14b270f3ede99b610d0",
+    "styles.css": "483fccbb4c6da3b992c3080aad695306d98b86abfd269ddae00653e4c2ca11ef"
+  },
+  "keepFiles": [
+    "gate.js"
+  ],
+  "exceptions": "see subx-factory EXCEPTIONS.md",
+  "stampedAt": "2026-10-13T13:47:36Z"
+}
