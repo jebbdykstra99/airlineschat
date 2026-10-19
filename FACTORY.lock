@@ -4,12 +4,13 @@
   "room": "airlineschat",
   "siteId": "airlineschat",
   "files": {
-    "factory.js": "7466eefc88f4103dcc159bcea5a788d35dc4b1402ffba14b270f3ede99b610d0",
+    "factory.js": "5db3afa908549bd776b862b44582f192bbeafaa35cf80941b5243015a38ec734",
     "styles.css": "483fccbb4c6da3b992c3080aad695306d98b86abfd269ddae00653e4c2ca11ef"
   },
   "keepFiles": [
     "gate.js"
   ],
   "exceptions": "see subx-factory EXCEPTIONS.md",
-  "stampedAt": "2026-10-13T13:47:36Z"
+  "stampedAt": "2026-10-19T14:00:00Z",
+  "masterRef": "subx-factory factory/v1.0.0 @ aaf157f"
 }
