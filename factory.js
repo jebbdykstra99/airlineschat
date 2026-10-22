@@ -1656,7 +1656,7 @@
   }
 
   function sendPixel(eventName) {
-    if (site && site.pixel === false) return; // opt-out per room (privacy v1.1 gate); default on as in T0
+    if (site && site.pixel === false) { try { localStorage.removeItem('subx.vid'); } catch (e) {} return; } // opt-out per room (privacy v1.1 gate): no beacon, and any old visitor ID is dropped
     try {
       var k = 'subx.vid';
       var v = localStorage.getItem(k);
@@ -5431,6 +5431,6 @@
     .catch(function (e) {
       console.warn('site.json', e);
       composeErr((e && e.message) ? e.message : 'Could not load site.json');
-      boot({ siteId: "311chat", name: "311chat", tagline: "Non-emergency city help. Find your 311." });
+      boot({ pixel: false, minAge: 18, siteId: "airlineschat", name: "airlineschat", tagline: "Airline issue-resolution. Delays, bags, refunds — not official support." });
     });
 })();
