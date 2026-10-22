@@ -1,7 +1,6 @@
 {
   "siteId": "airlineschat",
   "roomNumber": 18,
-  "redditSr": "airlineschat",
   "name": "airlineschat",
   "tagline": "Airline issue-resolution. Delays, bags, refunds — not official support.",
   "composePlaceholder": "What went wrong — delay, bags, refund, rebook?",
@@ -337,5 +336,11 @@
   "cacheBust": 2,
   "nestCount": 10,
   "leftNav": "US majors (10) nav:true; intl URL-only nav:false",
-  "lock": "2026-09-26 Jebb ASAP US majors"
+  "lock": "2026-09-26 Jebb ASAP US majors",
+  "redditCrosspost": false,
+  "features": {
+    "following": true,
+    "notifs": true
+  },
+  "minAge": 18
 }
