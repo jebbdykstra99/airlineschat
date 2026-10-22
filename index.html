@@ -231,7 +231,7 @@
   </div>
   <div class="profile-signin-prompt" id="profile-signin-prompt">
     <h2>See your airlineschat profile</h2>
-    <p>Unofficial issue-resolution chatter. Not affiliated with any airline. Guest can browse. Preview.</p>
+    <p>Unofficial issue-resolution chatter. Not affiliated with any airline. You can read without an account. Posting in the room requires an account, and every account holder must be 18 or older. Preview.</p>
     <button class="accent-btn" id="profile-signin-prompt-btn" type="button">Sign in</button>
   </div>
   <div class="profile-content" id="profile-content" hidden>
@@ -243,7 +243,7 @@
     <div class="profile-id">
       <div class="profile-display-name" id="profile-display-name">Guest</div>
       <div class="profile-handle" id="profile-handle">@guestairlines</div>
-      <p class="profile-bio" id="profile-bio">Unofficial helper — not a substitute for 911.</p>
+      <p class="profile-bio" id="profile-bio">Unofficial travel-help room. Not affiliated with any airline.</p>
       <div class="profile-meta" id="profile-meta">airlineschat · preview room</div>
       <div class="profile-counts">
         <button type="button" class="count-btn" disabled><strong>—</strong> Following <span class="tab-soon">Soon</span></button>
@@ -262,7 +262,7 @@
     <div class="chat-threads-header">
       <div class="chat-threads-title-row">
         <div class="chat-threads-title">Chat</div>
-        <button class="chat-new-btn" id="chat-new-btn" type="button" title="DMs coming soon" disabled>Soon</button>
+        <button class="chat-new-btn" id="chat-new-btn" type="button" title="New message" disabled>New</button>
       </div>
       <div class="chat-search-bar">
         <input type="text" class="chat-search-input" id="chat-search-input" placeholder="Search chats" autocomplete="off">
@@ -272,9 +272,9 @@
   </div>
   <div class="chat-active-pane" id="chat-active-pane">
     <div class="chat-placeholder" id="chat-placeholder">
-      <div class="chat-placeholder-title">Chat — Soon</div>
-      <div class="chat-placeholder-sub">Direct messages are not live in this preview. No DMs graph. Sample thread copy in site.json is not a real inbox.</div>
-      <button class="accent-btn" id="chat-placeholder-new" type="button" disabled>Soon</button>
+      <div class="chat-placeholder-title">Join to chat</div>
+      <div class="chat-placeholder-sub">Sign in to send and receive direct messages. Every account holder must be 18 or older.</div>
+      <button class="accent-btn" id="chat-placeholder-new" type="button" disabled>Join</button>
     </div>
     <div class="chat-thread-view" id="chat-thread-view" hidden>
       <div class="chat-thread-header">
@@ -283,7 +283,7 @@
       <div class="chat-messages" id="chat-messages"></div>
       <div class="chat-compose">
         <textarea class="chat-compose-input" id="chat-compose-input" placeholder="Message neighbors…" rows="1"></textarea>
-        <button class="chat-send-btn" id="chat-send-btn" type="button" disabled>Soon</button>
+        <button class="chat-send-btn" id="chat-send-btn" type="button" disabled>Send</button>
       </div>
     </div>
   </div>
@@ -345,7 +345,7 @@
   <div class="conv-modal">
     <button type="button" class="conv-modal-close" id="cv-modal-close" aria-label="Close sign in">&times;</button>
     <h2 id="auth-title">Join airlineschat</h2>
-    <p class="conv-modal-note">Email/password and Google on subx-skins. Guest is browse-only. Not a substitute for 911. Preview lock stays on.</p>
+    <p class="conv-modal-note">Sign in with email or Google. Guests can read only. You must be 18 or older to have an account. Preview.</p>
     <div class="conv-modal-tabs">
       <button class="conv-modal-tab active" data-tab="login" type="button">Sign In</button>
       <button class="conv-modal-tab" data-tab="register" type="button">Register</button>
@@ -388,8 +388,7 @@
   <script src="gate.js?v=2" data-site="site.json?v=2"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1/index.js"></script>
 <footer class="legal-footer" role="contentinfo" aria-label="Legal">
-  <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a> ·
-  <a href="/report.html">Report</a> · <a href="/guidelines.html">Guidelines</a>
+  <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a>
 </footer>
 <style>
   .legal-footer{position:fixed;left:0;right:0;bottom:0;z-index:2147483000;display:block!important;visibility:visible!important;
