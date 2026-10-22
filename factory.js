@@ -4371,7 +4371,7 @@
         const pw = document.getElementById('cv-reg-pw').value || '';
         const age = document.getElementById('cv-reg-age');
         if (!age || !age.checked) {
-          err.textContent = 'Confirm you are 18 or older and agree to the preview Terms and Privacy pages.';
+          err.textContent = ageGateMessage();
           err.classList.add('show');
           return;
         }
@@ -4403,7 +4403,7 @@
       runWithAuth(err, function () {
       var age = document.getElementById('cv-google-age');
       if (!age || !age.checked) {
-        err.textContent = 'Confirm you are 18 or older and agree to the preview Terms and Privacy pages.';
+        err.textContent = ageGateMessage();
         err.classList.add('show');
         return;
       }
@@ -5320,6 +5320,25 @@
     }
   }
 
+  // gpchat PR #31 port (CTO 10/22): signup age copy follows site.minAge (default 13)
+  function siteMinAge() {
+    var n = parseInt(site && site.minAge, 10);
+    if (!isFinite(n) || n < 1) return 13;
+    return n;
+  }
+  function ageGateMessage() {
+    return 'Confirm you are ' + siteMinAge() + ' or older and agree to the preview Terms and Privacy pages.';
+  }
+  function paintAgeLabels() {
+    var n = String(siteMinAge());
+    ['cv-google-age', 'cv-reg-age'].forEach(function (id) {
+      var input = document.getElementById(id);
+      var span = input && input.parentNode && input.parentNode.querySelector('span');
+      if (!span) return;
+      span.innerHTML = span.innerHTML.replace(/I am \d+ or older/g, 'I am ' + n + ' or older');
+    });
+  }
+
   function boot(data) {
     site = data || {};
     SITE_ID = site.siteId || SITE_ID;
@@ -5330,6 +5349,7 @@
     applyTheme(site.theme);
     applySiteChrome();
     ensureJoinAuthLayout();
+    paintAgeLabels();
     ensureDmCss();
     hideDummyChrome();
     syncChatChrome();
