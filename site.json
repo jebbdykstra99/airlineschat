@@ -337,5 +337,6 @@
   "nestCount": 10,
   "leftNav": "US majors (10) nav:true; intl URL-only nav:false",
   "lock": "2026-09-26 Jebb ASAP US majors",
-  "minAge": 18
+  "minAge": 18,
+  "pixel": false
 }

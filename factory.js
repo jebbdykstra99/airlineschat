@@ -1656,6 +1656,7 @@
   }
 
   function sendPixel(eventName) {
+    if (site && site.pixel === false) return; // opt-out per room (privacy v1.1 gate); default on as in T0
     try {
       var k = 'subx.vid';
       var v = localStorage.getItem(k);
@@ -5320,10 +5321,10 @@
     }
   }
 
-  // gpchat PR #31 port (CTO 10/22): signup age copy follows site.minAge (default 13)
+  // gpchat PR #31 port (CTO 10/22): signup age copy follows site.minAge (default 18)
   function siteMinAge() {
     var n = parseInt(site && site.minAge, 10);
-    if (!isFinite(n) || n < 1) return 13;
+    if (!isFinite(n) || n < 1) return 18;
     return n;
   }
   function ageGateMessage() {
