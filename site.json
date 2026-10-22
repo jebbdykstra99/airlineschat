@@ -13,7 +13,7 @@
   "dms": true,
   "robots": "noindex, nofollow",
   "honesty": "Unofficial traveler room · not airline customer service · not a booking site · preview",
-  "trustBlurb": "Unofficial issue-resolution chatter. Not affiliated with any airline. Guest can browse. Preview.",
+  "trustBlurb": "Unofficial issue-resolution chatter. Not affiliated with any airline. You can read without an account. Posting in the room requires an account, and every account holder must be 18 or older. Preview.",
   "exploreExplainer": "Browse carrier nests by region. Follow issue tags like #delay #bags #refund. This room does not rebook flights or process claims.",
   "locationGate": {
     "enabled": true,
@@ -302,9 +302,8 @@
       },
       {
         "tag": "Tips",
-        "headline": "Keep PNR + photos before you post",
-        "url": "https://www.transportation.gov/airconsumer",
-        "snippet": "Strong traveler notes include confirmation code, flight number, timestamps, and bag tag photos. Never paste full payment card data in the room.",
+        "headline": "Before you post, remove your confirmation code, ticket number and anything personal. Keep them for the airline, not the room.",
+        "snippet": "In the room, share the carrier, flight number, date and what happened. Never post payment card data, boarding passes or bag-tag barcodes.",
         "meta": "Best practice · preview"
       }
     ],
