@@ -1,6 +1,6 @@
 # airlineschat
 
-SubX room #18 — Airline issue-resolution. Delays, bags, refunds — not official support. (preview).
+SubX room #18: Airline issue-resolution. Delays, bags, refunds: not official support. (preview).
 
 Static site. `siteId` is `airlineschat`. Custom domain in `CNAME` is `airlineschat.com`. Preview banner and `noindex` stay on.
 
