@@ -30,7 +30,7 @@
   - Violent, hateful, harassing, or graphically offensive images are removed on sight, as are unredacted passenger PNRs and boarding-pass barcodes.
   - CSAM (18 U.S.C. Section 2258A): Immediate hiding, evidence preservation, and mandatory reporting to the NCMEC CyberTipline.
 - Lighter-Touch Text Moderation: Lawful passenger complaints, carrier fee critiques, and regulatory discussions are moderated with a lighter touch under American free-speech principles and 47 U.S.C. Section 230(c).
-- Human Appeal Path: Every moderation action may be appealed for human review by Jebb Dykstra at takedown@subx.it or +1-650-539-5005.
+- Human Appeal Path: Every moderation action may be appealed for human review by a human reviewer at SubX, LLC via takedown@subx.it or +1-650-539-5005.
 
 ## Canonical Site Structure
 - Main Feed: https://airlineschat.com/
