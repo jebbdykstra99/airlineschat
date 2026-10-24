@@ -3,9 +3,9 @@
   "roomNumber": 18,
   "redditSr": "airlineschat",
   "name": "airlineschat",
-  "tagline": "Airline issue-resolution. Delays, bags, refunds — not official support.",
-  "composePlaceholder": "What went wrong — delay, bags, refund, rebook?",
-  "emptyState": "Pick a carrier nest or share your region. Unofficial traveler chatter — not airline support. Sign in to post. Guest can browse. Preview.",
+  "tagline": "Airline issue-resolution. Delays, bags, refunds. Not official support.",
+  "composePlaceholder": "What went wrong: delay, bags, refund, rebook?",
+  "emptyState": "Pick a carrier nest or share your region. Unofficial traveler chatter, not airline support. Sign in to post. Guest can browse. Preview.",
   "preview": true,
   "noindex": true,
   "domain": "airlineschat.com",
@@ -60,7 +60,7 @@
       "label": "American Airlines",
       "kind": "airline",
       "parent": null,
-      "blurb": "AA — delays, bags, AAdvantage, irrops.",
+      "blurb": "AA: delays, bags, AAdvantage, irrops.",
       "nav": true
     },
     {
@@ -68,7 +68,7 @@
       "label": "Delta Air Lines",
       "kind": "airline",
       "parent": null,
-      "blurb": "DL — SkyMiles, connections, rebooking chatter.",
+      "blurb": "DL: SkyMiles, connections, rebooking chatter.",
       "nav": true
     },
     {
@@ -76,7 +76,7 @@
       "label": "United Airlines",
       "kind": "airline",
       "parent": null,
-      "blurb": "UA — MileagePlus, irregular ops, seats.",
+      "blurb": "UA: MileagePlus, irregular ops, seats.",
       "nav": true
     },
     {
@@ -84,7 +84,7 @@
       "label": "Southwest Airlines",
       "kind": "airline",
       "parent": null,
-      "blurb": "WN — bags fly free talk, Rapid Rewards, schedule.",
+      "blurb": "WN: bags fly free talk, Rapid Rewards, schedule.",
       "nav": true
     },
     {
@@ -92,7 +92,7 @@
       "label": "JetBlue",
       "kind": "airline",
       "parent": null,
-      "blurb": "B6 — TrueBlue, Mint, northeast corridors.",
+      "blurb": "B6: TrueBlue, Mint, northeast corridors.",
       "nav": true
     },
     {
@@ -100,7 +100,7 @@
       "label": "Alaska Airlines",
       "kind": "airline",
       "parent": null,
-      "blurb": "AS — Mileage Plan, West Coast / Hawaii.",
+      "blurb": "AS: Mileage Plan, West Coast / Hawaii.",
       "nav": true
     },
     {
@@ -108,7 +108,7 @@
       "label": "Spirit Airlines",
       "kind": "airline",
       "parent": null,
-      "blurb": "NK — ultra-low-cost fees and schedule.",
+      "blurb": "NK: ultra-low-cost fees and schedule.",
       "nav": true
     },
     {
@@ -116,7 +116,7 @@
       "label": "Frontier Airlines",
       "kind": "airline",
       "parent": null,
-      "blurb": "F9 — ULCC fees, schedule, and go-wild chatter.",
+      "blurb": "F9: ULCC fees, schedule, and go-wild chatter.",
       "nav": true
     },
     {
@@ -124,7 +124,7 @@
       "label": "Hawaiian Airlines",
       "kind": "airline",
       "parent": null,
-      "blurb": "HA — islands network, Alaska merger talk (cite).",
+      "blurb": "HA: islands network, Alaska merger talk (cite).",
       "nav": true
     },
     {
@@ -132,7 +132,7 @@
       "label": "Allegiant",
       "kind": "airline",
       "parent": null,
-      "blurb": "G4 — leisure routes and fee honesty.",
+      "blurb": "G4: leisure routes and fee honesty.",
       "nav": true
     },
     {
@@ -140,7 +140,7 @@
       "label": "British Airways",
       "kind": "airline",
       "parent": null,
-      "blurb": "BA — Avios, Heathrow, long-haul EU.",
+      "blurb": "BA: Avios, Heathrow, long-haul EU.",
       "nav": false
     },
     {
@@ -148,7 +148,7 @@
       "label": "Air France",
       "kind": "airline",
       "parent": null,
-      "blurb": "AF — Flying Blue, CDG.",
+      "blurb": "AF: Flying Blue, CDG.",
       "nav": false
     },
     {
@@ -156,7 +156,7 @@
       "label": "Lufthansa",
       "kind": "airline",
       "parent": null,
-      "blurb": "LH — Miles & More, FRA/MUC.",
+      "blurb": "LH: Miles & More, FRA/MUC.",
       "nav": false
     },
     {
@@ -164,7 +164,7 @@
       "label": "ANA",
       "kind": "airline",
       "parent": null,
-      "blurb": "NH — Mileage Club, Tokyo hubs.",
+      "blurb": "NH: Mileage Club, Tokyo hubs.",
       "nav": false
     },
     {
@@ -172,12 +172,12 @@
       "label": "Singapore Airlines",
       "kind": "airline",
       "parent": null,
-      "blurb": "SQ — KrisFlyer, Changi.",
+      "blurb": "SQ: KrisFlyer, Changi.",
       "nav": false
     }
   ],
   "directory": {
-    "note": "Carrier nests only — no official claim portals seeded yet. Outbound FACT links later. SAVE LINKS NOT CONTENT.",
+    "note": "Carrier nests only, no official claim portals seeded yet. Outbound FACT links later. SAVE LINKS NOT CONTENT.",
     "regions": {
       "us": {
         "label": "United States",
@@ -283,14 +283,14 @@
     "fact": {
       "tag": "FACT",
       "headline": "Not official airline support.",
-      "body": "airlineschat is traveler-to-traveler chatter about delays, bags, refunds, and rebooking. For ticket changes, claims, or compensation, use the airline's official app, website, or airport desk. EU261 / US DOT rules are public law — this room is not counsel."
+      "body": "airlineschat is traveler-to-traveler chatter about delays, bags, refunds, and rebooking. For ticket changes, claims, or compensation, use the airline's official app, website, or airport desk. EU261 / US DOT rules are public law. This room is not counsel."
     },
     "outbound": [
       {
         "tag": "Rights",
         "headline": "US DOT airline passenger rights",
         "url": "https://www.transportation.gov/airconsumer",
-        "snippet": "Official US Department of Transportation consumer page — refunds, delays, tarmac, disabilities. Outbound only.",
+        "snippet": "Official US Department of Transportation consumer page: refunds, delays, tarmac, disabilities. Outbound only.",
         "meta": "Official · verified 2026-09-26"
       },
       {
