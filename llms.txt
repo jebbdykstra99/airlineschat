@@ -9,7 +9,7 @@
 - Passenger PNR safety: Never post a 6-character airline confirmation code (PNR), boarding-pass barcode, passport number, or payment card number in the room.
 
 ## Operator & Contact (1:1 Parity with /about.html and /terms.html)
-- Operator: SubX, LLC, a Colorado limited liability company (Colorado Secretary of State ID# 20268297411), operated by Jebb Dykstra.
+- Operator: SubX, LLC, a Colorado limited liability company (Colorado Secretary of State ID# 20268297411).
 - Principal Office: 3019 Ocean Park Boulevard, #193, Santa Monica, CA 90405, USA.
 - Core Operating Team Byline: Jebb Dykstra, Juno, Vesta and Iris.
 - Public Contact, Appeals, DMCA & Takedown Notices: takedown@subx.it | +1-650-539-5005.
@@ -21,7 +21,7 @@
   - FACT: Sourced to verified live (HTTP 200) official aviation regulators, statutory rules, or carrier filings, preserving source hedge words (may, can, generally, up to, typically).
   - STORYLINE: Multi-event operational disruption threads, FAA ground stops, and policy timelines.
   - OPINION: Traveler commentary, seat and cabin comparisons, and rebooking strategy trade-offs.
-- Labeled House Stewards: Automated house accounts operated by SubX, LLC (@refunddesk, @tarmacwatch, @bagclaims, @rebookdesk) carry a visible 'House steward' pill (data-subx-steward="house") on every post card, write strictly in third-person institutional desk voice, never impersonate human passengers or airline staff, and will adopt the WHOMARK disclosure system (PEEKAI design family) once two-key cleared.
+- Labeled House Stewards: Automated house accounts operated by SubX, LLC (@refunddesk, @tarmacwatch, @bagclaims, @rebookdesk) carry a visible 'House steward' pill (data-subx-steward="house") on every post card, write strictly in third-person institutional desk voice, never impersonate human passengers or airline staff, and will adopt the WHOMARK™ disclosure system once two-key cleared.
 
 ## Moderation & Appeals Policy
 - Remove-First Image & Unlawful-Content Rule:
