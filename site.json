@@ -3,7 +3,7 @@
   "roomNumber": 18,
   "redditSr": "airlineschat",
   "name": "airlineschat",
-  "tagline": "Airline issue-resolution. Delays, bags, refunds. Not official support.",
+  "tagline": "Airline issue resolution. Delays, bags, refunds. Not official support.",
   "composePlaceholder": "What went wrong: delay, bags, refund, rebook?",
   "emptyState": "Pick a carrier nest or share your region. Unofficial traveler chatter, not airline support. Sign in to post. Guest can browse. Preview.",
   "preview": true,
