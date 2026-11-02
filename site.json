@@ -5,24 +5,21 @@
   "name": "airlineschat",
   "tagline": "Airline issue resolution. Delays, bags, refunds. Not official support.",
   "composePlaceholder": "What went wrong: delay, bags, refund, rebook?",
-  "emptyState": "Pick a carrier nest or share your region. Unofficial traveler chatter, not airline support. Sign in to post. Guest can browse. Preview.",
-  "preview": true,
-  "noindex": true,
+  "emptyState": "Pick a carrier nest or share your region. Unofficial traveler chatter, not airline support. Sign in to post. Guest can browse.",
+  "preview": false,
+  "noindex": false,
   "domain": "airlineschat.com",
   "earlyWelcome": false,
-  "dms": true,
-  "robots": "noindex, nofollow",
-  "honesty": "Unofficial traveler room · not airline customer service · not a booking site · preview",
-  "trustBlurb": "Unofficial issue-resolution chatter. Not affiliated with any airline. You can read without an account. Posting in the room requires an account, and every account holder must be 18 or older. Preview.",
+  "dms": false,
+  "robots": "index, follow",
+  "honesty": "Unofficial traveler room · not airline customer service · not a booking site",
+  "trustBlurb": "Unofficial issue-resolution chatter. Not affiliated with any airline. You can read without an account. Posting in the room requires an account, and every account holder must be 18 or older.",
   "exploreExplainer": "Browse carrier nests by region. Follow issue tags like #delay #bags #refund. This room does not rebook flights or process claims.",
   "locationGate": {
     "enabled": true,
-    "prompt": "Where are you flying from? We'll surface carriers for your region.",
-    "fields": [
-      "city",
-      "zip"
-    ],
-    "geolocationOptIn": true,
+    "prompt": "Pick a carrier nest to see where to take your issue.",
+    "fields": [],
+    "geolocationOptIn": false,
     "regionOptional": true
   },
   "stories": {
@@ -177,7 +174,7 @@
     }
   ],
   "directory": {
-    "note": "Carrier nests only, no official claim portals seeded yet. Outbound FACT links later. SAVE LINKS NOT CONTENT.",
+    "note": "Use your airline's official channels for claims and rebooking. The U.S. DOT takes air travel complaints at transportation.gov/airconsumer.",
     "regions": {
       "us": {
         "label": "United States",
@@ -276,14 +273,14 @@
   "rail": {
     "kind": "outbound",
     "title": "Room Brief",
-    "kicker": "Preview",
+    "kicker": "Unofficial",
     "maxCards": 3,
-    "meta": "Unofficial · not airline support · preview · noindex",
-    "footer": "Unofficial traveler room. We do not rebook, refund, or speak for any carrier. Official airline channels stay outbound.",
+    "meta": "Unofficial · not airline support",
+    "footer": "Unofficial traveler room. SubX does not rebook, refund, or speak for any carrier. Official airline channels stay outbound.",
     "fact": {
       "tag": "FACT",
       "headline": "Not official airline support.",
-      "body": "airlineschat is traveler-to-traveler chatter about delays, bags, refunds, and rebooking. For ticket changes, claims, or compensation, use the airline's official app, website, or airport desk. EU261 / US DOT rules are public law. This room is not counsel."
+      "body": "airlineschat is traveler-to-traveler chatter about delays, bags, refunds, and rebooking. For ticket changes, claims, or compensation, use the airline's official app, website, or airport desk. EU261 / US DOT rules are public law. This room is not legal advice."
     },
     "outbound": [
       {
@@ -304,7 +301,7 @@
         "tag": "Tips",
         "headline": "Before you post, remove your confirmation code, ticket number and anything personal. Keep them for the airline, not the room.",
         "snippet": "In the room, share the carrier, flight number, date and what happened. Never post payment card data, boarding passes or bag-tag barcodes.",
-        "meta": "Best practice · preview"
+        "meta": "Best practice"
       }
     ],
     "porch": {

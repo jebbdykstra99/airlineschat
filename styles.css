@@ -1395,9 +1395,9 @@ body.legal-page {
 }
 
 /* ── 311 room chrome: preview banner + honesty + city gate ── */
-:root { --chrome-h: 3.7rem; }
+:root { --chrome-h: 0px; } /* go-live: preview banner removed */
 @media (max-width: 720px) {
-  :root { --chrome-h: 7.2rem; }
+  :root { --chrome-h: 0px; }
 }
 body { padding-top: var(--chrome-h); }
 .sidebar { top: var(--chrome-h); }

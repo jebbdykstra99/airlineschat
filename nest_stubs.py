@@ -24,7 +24,7 @@ def main(repo, domain=None):
         except Exception: domain = ''
     idx = open(os.path.join(repo, 'index.html')).read() if os.path.exists(os.path.join(repo,'index.html')) else ''
     m = re.search(r'<meta\s+name="robots"\s+content="([^"]+)"', idx, re.I)
-    robots = m.group(1) if m else 'noindex, nofollow'
+    robots = m.group(1) if m else 'index, follow'
     name = site.get('name') or site.get('siteId') or domain
     wrote, skipped = [], []
     want = set()

@@ -6,7 +6,7 @@
   const LS_LIKES = '311chat.likes';
   const SITE_JSON_URL = (document.currentScript && document.currentScript.getAttribute('data-site')) || 'site.json';
 
-  let SITE_ID = '311chat';
+  let SITE_ID = 'airlineschat';
   let site = null;
   let COLORS = ['#0b1c2c', '#1b6b73', '#c0362c', '#2a4a62', '#8a3b32', '#345c6e'];
   let TRENDS = [];
@@ -166,7 +166,7 @@
   var shareSheetPostId = null;
 
   function postPermalink(postId) {
-    var host = (location.hostname || '').replace(/^www\./i, '') || '311chat.com';
+    var host = (location.hostname || '').replace(/^www\./i, '') || 'airlineschat.com';
     return 'https://p.' + host + '/status/' + encodeURIComponent(String(postId || ''));
   }
 
@@ -417,9 +417,9 @@
 
   function applySiteChrome() {
     if (!site) return;
-    var title = site.name || "311chat";
-    var tag = site.tagline || 'Non-emergency city help. Find your 311.';
-    document.title = tag ? (title + ' — ' + tag) : title;
+    var title = site.name || "airlineschat";
+    var tag = site.tagline || 'Airline issue resolution. Delays, bags, refunds. Not official support.';
+    document.title = tag ? (title + ' · ' + tag) : title;
     var brandTitle = document.querySelector('.brand-title');
     var brandSub = document.querySelector('.brand-sub');
     var brandMark = document.querySelector('.brand-mark');
@@ -432,7 +432,7 @@
     if (authTitle) authTitle.textContent = 'Join ' + title;
     var authNote = document.querySelector('#cv-auth-overlay .conv-modal-note');
     if (authNote) {
-      authNote.textContent = site.trustBlurb || ('Unofficial helper. Not a substitute for 911. Links to official city channels. Guest is browse-only. Preview.');
+      authNote.textContent = site.trustBlurb || ('Unofficial traveler room. Not airline support. Not a booking site. Guests can read only.');
     }
     var input = document.getElementById('thoughts-compose-input');
     if (input && site.composePlaceholder) {
@@ -901,8 +901,8 @@
     var title = (site && site.name) || SITE_ID || 'room';
     var tag = (site && site.tagline) || '';
     document.title = nest
-      ? ((nest.label || nest.slug) + ' — ' + title)
-      : (tag ? (title + ' — ' + tag) : title);
+      ? ((nest.label || nest.slug) + ' · ' + title)
+      : (tag ? (title + ' · ' + tag) : title);
     var brandSub = document.querySelector('.brand-sub');
     if (brandSub) brandSub.textContent = nest ? (nest.label || nest.slug) : tag;
     var input = document.getElementById('thoughts-compose-input');
@@ -1187,7 +1187,7 @@
     var slug = slugifyNest((document.getElementById('nest-create-slug') || {}).value || label);
     if (!label) { if (err) err.textContent = 'Add a label.'; return; }
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug) || slug.length < 2) {
-      if (err) err.textContent = 'Slug needs 2–40 letters, numbers, or hyphens.';
+      if (err) err.textContent = 'Slug needs 2 to 40 letters, numbers, or hyphens.';
       return;
     }
     if (nestSlugTaken(slug)) {
@@ -1417,13 +1417,13 @@
     if (!el) return;
 
     if (currentTab === 'following') {
-      el.innerHTML = '<div class="post-empty soon-panel"><strong>Following — Soon.</strong> There is no follows graph in this preview. The live room is on For You.</div>';
+      el.innerHTML = '<div class="post-empty soon-panel"><strong>Following · Soon.</strong> Following is not live yet. The live room is on For You.</div>';
       refreshPorchUi();
       return;
     }
 
     if (liveError) {
-      el.innerHTML = '<div class="post-empty">Live feed could not load. The error is in the compose line above — this is not an empty room.</div>';
+      el.innerHTML = '<div class="post-empty">Live feed could not load. The error is in the compose line above. This is not an empty room.</div>';
       refreshPorchUi();
       return;
     }
@@ -1502,7 +1502,7 @@
       '<div class="news-item-tag">' + escapeHtml(tag) + '</div>' +
       (headline ? '<div class="news-item-headline">' + escapeHtml(headline) + '</div>' : '') +
       (body ? '<div class="news-item-snippet">' + escapeHtml(body) + '</div>' : '') +
-      '<div class="news-item-meta">' + escapeHtml(railCfg().meta || 'Preview · noindex') + '</div>' +
+      '<div class="news-item-meta">' + escapeHtml(railCfg().meta || '') + '</div>' +
     '</div>';
   }
 
@@ -2880,8 +2880,8 @@
     const el = document.getElementById('notif-list');
     if (!el) return;
     el.innerHTML = '<div class="soon-panel">' +
-      '<strong>Notifications — Soon.</strong>' +
-      '<p>No live alerts in this preview. Dummy copy stays in site.json as sample only and is not shown as real activity.</p>' +
+      '<strong>Notifications · Soon.</strong>' +
+      '<p>Notifications are not live yet.</p>' +
       '</div>';
     const badge = document.getElementById('notif-badge');
     if (badge) {
@@ -2892,7 +2892,7 @@
   }
 
   function dmSiteId() {
-    return SITE_ID || '311chat';
+    return SITE_ID || 'airlineschat';
   }
   function convIdFor(uidA, uidB) {
     return dmSiteId() + '__' + [String(uidA || ''), String(uidB || '')].sort().join('_');
@@ -3004,8 +3004,8 @@
     var ph = document.getElementById('chat-placeholder');
     var view = document.getElementById('chat-thread-view');
     if (!dmsOn()) {
-      if (title) title.textContent = 'Chat — Soon';
-      if (sub) sub.textContent = 'Direct messages are not live in this preview. No DMs graph. Sample thread copy in site.json is not a real inbox.';
+      if (title) title.textContent = 'Chat · Soon';
+      if (sub) sub.textContent = 'Direct messages are not live yet.';
       if (ph) ph.hidden = false;
       if (view) view.hidden = true;
       return;
@@ -3094,8 +3094,8 @@
     if (!el) return;
     if (!dmsOn()) {
       el.innerHTML = '<div class="soon-panel soon-panel-pad">' +
-        '<strong>Chat — Soon.</strong>' +
-        '<p>Direct messages are not live. Sample thread copy in site.json is not a real inbox.</p>' +
+        '<strong>Chat · Soon.</strong>' +
+        '<p>Direct messages are not live yet.</p>' +
         '</div>';
       return;
     }
@@ -3322,7 +3322,7 @@
       rows.sort(function (a, b) { return a.name.localeCompare(b.name); });
       if (!list) return;
       if (!rows.length) {
-        list.innerHTML = '<div class="soon-panel">No 311chat users yet.</div>';
+        list.innerHTML = '<div class="soon-panel">No members yet.</div>';
         return;
       }
       list.innerHTML = rows.map(function (u) {
@@ -3398,7 +3398,7 @@
     if (!pane) return;
     const mine = livePosts.filter(function (p) { return p.authorUid && p.authorUid === uid; });
     if (!mine.length) {
-      pane.innerHTML = '<div class="empty-note" id="profile-posts-empty">No posts yet. Official 311 is the handoff at the top of Home. Sign in to talk with neighbors.</div>';
+      pane.innerHTML = '<div class="empty-note" id="profile-posts-empty">No posts yet. Sign in to share what happened on your trip.</div>';
     } else {
       pane.innerHTML = mine.map(function (p) { return renderPost(p, !!p.parentId); }).join('');
     }
@@ -3438,7 +3438,7 @@
     paintProfile(
       currentUser.name,
       currentUser.handle,
-      currentUser.bio || "Unofficial helper — not a substitute for 911.",
+      currentUser.bio || "Unofficial traveler. Not airline support.",
       currentUser.uid
     );
   }
@@ -3660,8 +3660,8 @@
     var draft = peekCompose();
     currentUser = {
       name: name || 'Guest',
-      handle: (handle || 'guest311').replace(/^@/, '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 15) || 'guest311',
-      bio: "Unofficial helper — not a substitute for 911.",
+      handle: (handle || 'guestairlines').replace(/^@/, '').toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 15) || 'guestairlines',
+      bio: "Unofficial traveler. Not airline support.",
       live: false
     };
     saveJSON(LS_USER, currentUser);
@@ -4371,7 +4371,7 @@
         const pw = document.getElementById('cv-reg-pw').value || '';
         const age = document.getElementById('cv-reg-age');
         if (!age || !age.checked) {
-          err.textContent = 'Confirm you are 18 or older and agree to the preview Terms and Privacy pages.';
+          err.textContent = 'Confirm you are 18 or older and agree to the Terms and Privacy pages.';
           err.classList.add('show');
           return;
         }
@@ -4403,7 +4403,7 @@
       runWithAuth(err, function () {
       var age = document.getElementById('cv-google-age');
       if (!age || !age.checked) {
-        err.textContent = 'Confirm you are 18 or older and agree to the preview Terms and Privacy pages.';
+        err.textContent = 'Confirm you are 18 or older and agree to the Terms and Privacy pages.';
         err.classList.add('show');
         return;
       }
@@ -4880,7 +4880,7 @@
     if (!storiesOn()) return;
     if (!force && !requireVerified('add a story')) return;
     if (!force && storiesPostedToday() >= STORIES_PER_DAY) {
-      composeErr('Easy — a few stories a day is enough. Try again tomorrow.');
+      composeErr('A few stories a day is enough. Try again tomorrow.');
       return;
     }
     ensureStoriesComposer();
@@ -4925,7 +4925,7 @@
     if (!fbDb) { storiesErr('Stories are not connected.'); return; }
     if (siteKilled) { storiesErr('This room is paused.'); return; }
     if (storiesPostedToday() >= STORIES_PER_DAY) {
-      storiesErr('Easy — a few stories a day is enough.');
+      storiesErr('A few stories a day is enough.');
       return;
     }
     var live = fbAuth && fbAuth.currentUser;
@@ -5288,8 +5288,8 @@
           el.hidden = false;
           el.innerHTML =
             '<button type="button" class="stories-item is-add" data-story-add="1" aria-label="Add story">' +
-              '<span class="stories-ring"><span class="stories-avatar" style="background:' + colorFor(SITE_ID || '311chat') + '">' +
-              escapeHtml(String(SITE_ID || '311chat').replace(/chat$/i, '').slice(0, 3).toUpperCase() || 'ME') + '</span>' +
+              '<span class="stories-ring"><span class="stories-avatar" style="background:' + colorFor(SITE_ID || 'airlineschat') + '">' +
+              escapeHtml(String(SITE_ID || 'airlineschat').replace(/chat$/i, '').slice(0, 3).toUpperCase() || 'ME') + '</span>' +
               '<span class="stories-add-badge">+</span></span>' +
               '<span class="stories-label">Add story</span></button>';
         },
@@ -5301,8 +5301,8 @@
               id: s.id || ('demo-' + i),
               siteId: SITE_ID,
               authorUid: s.authorUid || ('demo-' + i),
-              name: s.name || (site && site.name) || '311chat',
-              handle: s.handle || SITE_ID || '311chat',
+              name: s.name || (site && site.name) || 'airlineschat',
+              handle: s.handle || SITE_ID || 'airlineschat',
               type: s.type || 'text',
               text: s.text || '',
               mediaUrl: s.mediaUrl || '',
@@ -5410,6 +5410,6 @@
     .catch(function (e) {
       console.warn('site.json', e);
       composeErr((e && e.message) ? e.message : 'Could not load site.json');
-      boot({ siteId: "311chat", name: "311chat", tagline: "Non-emergency city help. Find your 311." });
+      boot({ siteId: "airlineschat", name: "airlineschat", tagline: "Airline issue resolution. Delays, bags, refunds. Not official support." });
     });
 })();
