@@ -2,54 +2,24 @@
   'use strict';
 
   var SITE_URL = (document.currentScript && document.currentScript.getAttribute('data-site')) || 'site.json';
-  var HONESTY = 'Unofficial helper · not a substitute for 911 · links to official city channels · preview';
+  var HONESTY = 'Unofficial · not airline support · not a booking site';
   var MAX_KM = 100;
-  var LS_NEST = '311chat.nest';
+  var LS_NEST = 'airlineschat.nest';
 
-  var ALIASES = {
-    nyc: ['nyc', 'new york', 'new york city', 'manhattan', 'brooklyn', 'queens', 'bronx', 'staten island'],
-    la: ['la', 'los angeles'],
-    chicago: ['chicago', 'chi'],
-    houston: ['houston'],
-    phoenix: ['phoenix'],
-    philadelphia: ['philadelphia', 'philly'],
-    'san-antonio': ['san antonio', 'sanantonio', 'san-antonio'],
-    boston: ['boston']
-  };
+  // No location matching in this room: carriers are picked directly.
+  var ALIASES = {};
 
-  var ZIP3 = {
-    '100': 'nyc', '101': 'nyc', '102': 'nyc', '103': 'nyc', '104': 'nyc',
-    '111': 'nyc', '112': 'nyc', '113': 'nyc', '114': 'nyc',
-    '900': 'la', '901': 'la', '902': 'la', '903': 'la', '904': 'la', '905': 'la',
-    '906': 'la', '907': 'la', '908': 'la', '910': 'la', '911': 'la', '912': 'la',
-    '913': 'la', '914': 'la', '915': 'la', '916': 'la',
-    '606': 'chicago',
-    '770': 'houston', '772': 'houston', '773': 'houston', '774': 'houston', '775': 'houston',
-    '850': 'phoenix', '851': 'phoenix', '852': 'phoenix', '853': 'phoenix',
-    '191': 'philadelphia',
-    '782': 'san-antonio',
-    '021': 'boston', '022': 'boston'
-  };
+  var ZIP3 = {};
 
-  var CENTERS = {
-    nyc: [40.7128, -74.006],
-    la: [34.0522, -118.2437],
-    chicago: [41.8781, -87.6298],
-    houston: [29.7604, -95.3698],
-    phoenix: [33.4484, -112.074],
-    philadelphia: [39.9526, -75.1652],
-    'san-antonio': [29.4241, -98.4936],
-    boston: [42.3601, -71.0589]
-  };
+  var CENTERS = {};
 
   var ISSUES = [
-    ['pothole', 'Pothole'],
-    ['streetlight', 'Streetlight'],
-    ['trash', 'Trash'],
-    ['graffiti', 'Graffiti'],
-    ['noise', 'Noise'],
-    ['animals', 'Animals'],
-    ['parking', 'Parking / info'],
+    ['delay', 'Delay'],
+    ['cancel', 'Cancellation'],
+    ['bags', 'Bags'],
+    ['refund', 'Refund'],
+    ['rebook', 'Rebooking'],
+    ['irrops', 'Irregular ops'],
     ['other', 'Other']
   ];
 
@@ -144,7 +114,6 @@
   }
   function telHref(phone) {
     var raw = String(phone || '').trim();
-    if (raw === '311') return 'tel:311';
     var digits = raw.replace(/[^\d+]/g, '');
     return digits ? ('tel:' + digits) : '';
   }
@@ -226,7 +195,7 @@
     renderHandoff();
     if (note) setNote(note, isErr);
     else if (nest) setNote(nest.label + ' · nest ?nest=' + nest.slug, false);
-    else setNote('Pick a city, enter a ZIP, or use location if you want to.', false);
+    else setNote('Pick a carrier nest below.', false);
   }
   function resolveFromForm() {
     var city = ($('city-input') && $('city-input').value) || '';
@@ -234,31 +203,31 @@
     var fromCity = cityToSlug(city);
     var fromZip = zipToSlug(zip);
     if (fromCity && fromZip && fromCity !== fromZip) {
-      selectSlug(fromCity, 'That ZIP is not in ' + (nestBySlug(fromCity).label) + ' for this preview. Showing the city you typed.', true);
+      selectSlug(fromCity, 'Showing the carrier you typed.', true);
       return;
     }
     var slug = fromCity || fromZip;
     if (!slug) {
-      selectSlug('', 'No seed city matched. Pick one of the eight cities below.', true);
+      selectSlug('', 'No carrier matched. Pick a carrier nest below.', true);
       return;
     }
     selectSlug(slug, '', false);
   }
   function useGeo() {
     if (!navigator.geolocation) {
-      setNote('This browser has no location API. Type a city or ZIP.', true);
+      setNote('Pick a carrier nest below.', true);
       return;
     }
     setNote('Asking the browser for location…', false);
     navigator.geolocation.getCurrentPosition(function (pos) {
       var slug = nearestSlug(pos.coords.latitude, pos.coords.longitude);
       if (!slug) {
-        selectSlug('', 'That point is outside the eight preview cities. Type a city or pick one.', true);
+        selectSlug('', 'Pick a carrier nest below.', true);
         return;
       }
-      selectSlug(slug, 'Matched from the location you allowed. Nothing was read from the network.', false);
+      selectSlug(slug, '', false);
     }, function () {
-      setNote('Location stayed off. Type a city or ZIP instead.', true);
+      setNote('Pick a carrier nest below.', true);
     }, { enableHighAccuracy: false, timeout: 8000, maximumAge: 60000 });
   }
   function syncChrome() {
@@ -294,7 +263,7 @@
     var initial = nestBySlug(fromQuery) ? fromQuery : (nestBySlug(stored) ? stored : '');
     renderPicks();
     if (initial) selectSlug(initial, '', false);
-    else setNote('Location is optional. The button asks the browser. We do not guess from your network.', false);
+    else setNote('SubX does not handle claims or rebook flights.', false);
 
     var form = $('city-gate-form');
     if (form) form.addEventListener('submit', function (e) {
@@ -328,6 +297,6 @@
     })
     .then(boot)
     .catch(function () {
-      boot({ honesty: HONESTY, nests: [], directory: { cities: {} }, locationGate: { enabled: true, geolocationOptIn: true, prompt: "Where are you? We'll find your city's non-emergency 311." } });
+      boot({ honesty: HONESTY, nests: [], directory: { cities: {} }, locationGate: { enabled: false, geolocationOptIn: false, prompt: 'Pick a carrier nest to see where to take your issue.' } });
     });
 })();

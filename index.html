@@ -21,7 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css?v=3">
-  <link rel="preload" href="site.json?v=5" as="fetch" crossorigin="anonymous">
+  <link rel="preload" href="site.json?v=6" as="fetch" crossorigin="anonymous">
 </head>
 <body>
 <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-controls="sidebar" aria-expanded="false">
@@ -112,8 +112,6 @@
       <a href="terms.html">Terms</a>
       <span>&middot;</span>
       <a href="privacy.html">Privacy</a>
-      <span>&middot;</span>
-      <span>Preview</span>
     </div>
   </nav>
 </aside>
@@ -124,22 +122,10 @@
   <section class="page active" id="page-thoughts">
 
     <section class="city-gate" id="city-gate" aria-labelledby="city-gate-title">
-      <div class="city-gate-kicker">Non-emergency</div>
-      <h2 class="city-gate-title" id="city-gate-title">Where are you?</h2>
-      <p class="city-gate-prompt" id="city-gate-prompt">Where are you flying from? SubX will surface carriers for your region.</p>
-      <form class="city-gate-form" id="city-gate-form">
-        <label class="city-field"><span>City</span>
-          <input id="city-input" name="city" autocomplete="address-level2" placeholder="Boston">
-        </label>
-        <label class="city-field"><span>ZIP</span>
-          <input id="zip-input" name="zip" inputmode="numeric" autocomplete="postal-code" placeholder="02108" maxlength="10">
-        </label>
-        <div class="city-gate-actions">
-          <button class="accent-btn" id="city-find-btn" type="submit">Continue</button>
-          <button class="ghost-btn" id="geo-opt-in" type="button">Use my location</button>
-        </div>
-      </form>
-      <p class="city-gate-note" id="city-gate-note">Location is optional. The button asks the browser. SubX does not guess from your network.</p>
+      <div class="city-gate-kicker">Unofficial</div>
+      <h2 class="city-gate-title" id="city-gate-title">Which airline?</h2>
+      <p class="city-gate-prompt" id="city-gate-prompt">Pick a carrier nest to see where to take your issue.</p>
+      <p class="city-gate-note" id="city-gate-note">SubX does not handle claims or rebook flights.</p>
       <div class="nest-picks" id="nest-picks"></div>
       <p class="issue-label" id="issue-label" hidden>What happened? SubX does not handle claims or rebook flights. Your airline does; the US DOT takes complaints.</p>
       <div class="issue-picks" id="issue-picks" hidden></div>
@@ -154,9 +140,9 @@
 
     <div class="thoughts-compose-wrap" id="thoughts-compose-wrap">
       <div class="thoughts-compose-row">
-        <div class="thoughts-compose-avatar" id="thoughts-compose-avatar">31</div>
+        <div class="thoughts-compose-avatar" id="thoughts-compose-avatar">AC</div>
         <div class="thoughts-compose-right">
-          <textarea class="thoughts-compose-input" id="thoughts-compose-input" placeholder="What needs fixing in your city?" rows="2" maxlength="280"></textarea>
+          <textarea class="thoughts-compose-input" id="thoughts-compose-input" placeholder="What went wrong: delay, bags, refund, rebook?" rows="2" maxlength="280"></textarea>
         </div>
       </div>
       <input type="file" id="compose-image-input" accept="image/*,.jpg,.jpeg,.png,.gif,.webp,.heic,.heif,.bmp" style="display:none">
@@ -205,7 +191,7 @@
 
   <section class="page" id="page-news">
     <div class="page-header">
-      <div class="page-kicker">Preview</div>
+      <div class="page-kicker">Unofficial</div>
       <h1>Room Brief</h1>
       <div class="page-rule"></div>
     </div>
@@ -225,7 +211,7 @@
   </div>
   <div class="profile-signin-prompt" id="profile-signin-prompt">
     <h2>See your airlineschat profile</h2>
-    <p>Unofficial issue-resolution chatter. Not affiliated with any airline. You can read without an account. Posting in the room requires an account, and every account holder must be 18 or older. Preview.</p>
+    <p>Unofficial issue-resolution chatter. Not affiliated with any airline. You can read without an account. Posting in the room requires an account, and every account holder must be 18 or older.</p>
     <button class="accent-btn" id="profile-signin-prompt-btn" type="button">Sign in</button>
   </div>
   <div class="profile-content" id="profile-content" hidden>
@@ -238,14 +224,14 @@
       <div class="profile-display-name" id="profile-display-name">Guest</div>
       <div class="profile-handle" id="profile-handle">@guestairlines</div>
       <p class="profile-bio" id="profile-bio">Unofficial travel-help room. Not affiliated with any airline.</p>
-      <div class="profile-meta" id="profile-meta">airlineschat · preview room</div>
+      <div class="profile-meta" id="profile-meta">airlineschat · unofficial traveler room</div>
       <div class="profile-counts">
         <button type="button" class="count-btn" disabled><strong>-</strong> Following <span class="tab-soon">Soon</span></button>
         <button type="button" class="count-btn" disabled><strong>-</strong> Followers <span class="tab-soon">Soon</span></button>
       </div>
     </div>
     <div class="profile-posts" id="profile-pane-posts">
-      <div class="empty-note" id="profile-posts-empty">Pick a carrier nest or share your region. Unofficial traveler chatter, not airline support. Sign in to post. Guest can browse. Preview.</div>
+      <div class="empty-note" id="profile-posts-empty">Pick a carrier nest or share your region. Unofficial traveler chatter, not airline support. Sign in to post. Guest can browse.</div>
     </div>
   </div>
 </div>
@@ -305,7 +291,7 @@
   <div class="explore-search-wrap">
     <div class="explore-search-bar">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-      <input type="text" class="explore-search-input" id="explore-search-input" placeholder="Search city nests…" autocomplete="off">
+      <input type="text" class="explore-search-input" id="explore-search-input" placeholder="Search carrier nests…" autocomplete="off">
     </div>
   </div>
   <div class="explore-tabs thoughts-tabs">
@@ -319,12 +305,12 @@
 <!-- ── Right rail ───────────────────────────────────── -->
 <aside class="right-panel" id="right-panel">
   <div class="right-panel-header">
-    <div class="right-panel-kicker">Preview</div>
+    <div class="right-panel-kicker">Unofficial</div>
     <div class="right-panel-title">Room Brief</div>
   </div>
   <div class="right-panel-body" id="news-feed"></div>
   <div class="right-panel-footer">
-    <p>Official city channels live in the handoff cards. This room does not file the report.</p>
+    <p>Official airline and U.S. DOT channels stay outbound. This room does not file claims or rebook flights.</p>
   </div>
 </aside>
 
@@ -339,7 +325,7 @@
   <div class="conv-modal">
     <button type="button" class="conv-modal-close" id="cv-modal-close" aria-label="Close sign in">&times;</button>
     <h2 id="auth-title">Join airlineschat</h2>
-    <p class="conv-modal-note">Sign in with email or Google. Guests can read only. You must be 18 or older to have an account. Preview.</p>
+    <p class="conv-modal-note">Sign in with email or Google. Guests can read only. You must be 18 or older to have an account.</p>
     <div class="conv-modal-tabs">
       <button class="conv-modal-tab active" data-tab="login" type="button">Sign In</button>
       <button class="conv-modal-tab" data-tab="register" type="button">Register</button>
@@ -378,8 +364,8 @@
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-storage-compat.js"></script>
-  <script src="factory.js?v=6" data-site="site.json?v=5"></script>
-  <script src="gate.js?v=2" data-site="site.json?v=5"></script>
+  <script src="factory.js?v=7" data-site="site.json?v=6"></script>
+  <script src="gate.js?v=3" data-site="site.json?v=6"></script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@1/index.js"></script>
 <footer class="legal-footer" role="contentinfo" aria-label="Legal">
   <a href="/terms.html">Terms</a> · <a href="/privacy.html">Privacy</a> · <a href="/report.html">Report</a>
