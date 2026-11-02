@@ -11,9 +11,9 @@
 ## Operator & Contact (1:1 Parity with /about.html and /terms.html)
 - Operator: SubX, LLC, a Colorado limited liability company (Colorado Secretary of State ID# 20268297411).
 - Principal Office: 3019 Ocean Park Boulevard, #193, Santa Monica, CA 90405, USA.
-- Core Operating Team Byline: Jebb Dykstra, Juno, Vesta and Iris.
+- Built and maintained by: SubX, LLC.
 - Public Contact, Appeals, DMCA & Takedown Notices: takedown@subx.it | +1-650-539-5005.
-- Preview Status: "Preview only." (noindex, nofollow remains active until lifted by the operator after two-key clearance).
+- Status: Live. Search indexing allowed.
 - Age Requirement: Open to adults 18+ (minAge: 18, self-attested by checkbox at sign-up). Reading is free without an account; posting, replying, and voting require an 18+ account.
 
 ## Editorial Labels & Labeled AI Stewards
@@ -37,6 +37,8 @@
 - About & FAQPage Schema: https://airlineschat.com/about.html
 - Terms of Service: https://airlineschat.com/terms.html
 - Privacy Policy: https://airlineschat.com/privacy.html
+- Report / Takedown Request: https://airlineschat.com/report.html
+- Sitemap: https://airlineschat.com/sitemap.xml
 - U.S. Carrier Nests (10): /american, /delta, /united, /southwest, /jetblue, /alaska, /spirit, /frontier, /hawaiian, /allegiant
 - International Carrier Nests (5): /british-airways, /air-france, /lufthansa, /ana, /singapore
 - Triage Issue Tags (5): #delay, #bags, #refund, #rebook, #irrops
