@@ -1502,7 +1502,7 @@
       '<div class="news-item-tag">' + escapeHtml(tag) + '</div>' +
       (headline ? '<div class="news-item-headline">' + escapeHtml(headline) + '</div>' : '') +
       (body ? '<div class="news-item-snippet">' + escapeHtml(body) + '</div>' : '') +
-      '<div class="news-item-meta">' + escapeHtml(railCfg().meta || 'Preview · noindex') + '</div>' +
+      '<div class="news-item-meta">' + escapeHtml(railCfg().meta || '') + '</div>' +
     '</div>';
   }
 
