@@ -6,7 +6,7 @@
   "tagline": "Airline issue resolution. Delays, bags, refunds. Not official support.",
   "composePlaceholder": "What went wrong: delay, bags, refund, rebook?",
   "emptyState": "Pick a carrier nest or share your region. Unofficial traveler chatter, not airline support. Sign in to post. Guest can browse. Preview.",
-  "preview": true,
+  "preview": false,
   "noindex": true,
   "domain": "airlineschat.com",
   "earlyWelcome": false,
@@ -278,12 +278,12 @@
     "title": "Room Brief",
     "kicker": "Preview",
     "maxCards": 3,
-    "meta": "Unofficial · not airline support · preview · noindex",
+    "meta": "Unofficial · not airline support",
     "footer": "Unofficial traveler room. We do not rebook, refund, or speak for any carrier. Official airline channels stay outbound.",
     "fact": {
       "tag": "FACT",
       "headline": "Not official airline support.",
-      "body": "airlineschat is traveler-to-traveler chatter about delays, bags, refunds, and rebooking. For ticket changes, claims, or compensation, use the airline's official app, website, or airport desk. EU261 / US DOT rules are public law. This room is not counsel."
+      "body": "airlineschat is traveler-to-traveler chatter about delays, bags, refunds, and rebooking. For ticket changes, claims, or compensation, use the airline's official app, website, or airport desk. EU261 / US DOT rules are public law. This room is not legal advice."
     },
     "outbound": [
       {

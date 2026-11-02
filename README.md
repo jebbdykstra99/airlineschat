@@ -1,8 +1,8 @@
 # airlineschat
 
-SubX room #18: Airline issue-resolution. Delays, bags, refunds: not official support. (preview).
+SubX room #18: Airline issue-resolution. Delays, bags, refunds: not official support. (live).
 
-Static site. `siteId` is `airlineschat`. Custom domain in `CNAME` is `airlineschat.com`. Preview banner and `noindex` stay on.
+Static site. `siteId` is `airlineschat`. Custom domain in `CNAME` is `airlineschat.com`. Live: preview banner removed, search indexing allowed (`robots.txt` + `sitemap.xml`).
 
 Deploy `main` from `/` on GitHub Pages (Cloudflare DNS next). Factory shell talks to Firebase project `subx-skins` (fetches `firebase-web-config.json`; no API keys in this repo).
 

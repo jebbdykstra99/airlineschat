@@ -1,3 +1,5 @@
+# airlineschat robots.txt · live (preview lock lifted)
 User-agent: *
-Disallow: /
-# noindex preview lock.
+Allow: /
+
+Sitemap: https://airlineschat.com/sitemap.xml
