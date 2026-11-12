@@ -35,13 +35,26 @@
     if (!fbDb) return Promise.resolve();
     var data = {
       displayName: disp,
-      siteId: SITE_ID,
-      createdAt: firebase.firestore.FieldValue.serverTimestamp()
+      siteId: SITE_ID
     };
     if (extra) {
-      Object.keys(extra).forEach(function (k) { data[k] = extra[k]; });
+      Object.keys(extra).forEach(function (k) {
+        if (k === 'createdAt') return;
+        data[k] = extra[k];
+      });
     }
-    return fbDb.collection('users').doc(user.uid).set(data, { merge: true });
+    var ref = fbDb.collection('users').doc(user.uid);
+    function write(isNew) {
+      if (isNew) {
+        data.createdAt = (extra && extra.createdAt) || firebase.firestore.FieldValue.serverTimestamp();
+      }
+      return ref.set(data, { merge: true });
+    }
+    return ref.get().then(function (snap) {
+      return write(!snap.exists);
+    }, function () {
+      return write(false);
+    });
   }
   function openDisplayNamePrompt() {
     if (!document.getElementById('name-prompt-css')) {
@@ -88,7 +101,7 @@
       if (box) box.hidden = true;
       if (typeof composeErr === 'function') composeErr('Display name saved.');
     }).catch(function (e) {
-      if (err) err.textContent = (e && e.message) ? e.message : 'Could not save that name.';
+      if (err) err.textContent = 'Could not save that name.';
     });
   }
 
@@ -5490,7 +5503,9 @@
       } else {
         loadSigninModule().then(function (api) {
           return api.handleRedirectResult();
-        }).catch(function (e) { console.warn('redirect result', e); });
+        }).catch(function (e) {
+          console.warn('redirect result', e);
+        }).then(function () { markRedirectSettled(); }, function () { markRedirectSettled(); });
         fbAuth.onAuthStateChanged(function (user) {
           authStateKnown = true;
           if (user) {
