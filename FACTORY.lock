@@ -1,0 +1,18 @@
+{
+  "factory": "jebbdykstra99/subx-factory",
+  "version": "v1.2.9",
+  "room": "airlineschat",
+  "siteId": "airlineschat",
+  "files": {
+    "factory.js": "a611c2b612a8d4a039339af5db4b1614b47693f0a5564b68417d511d2b432093",
+    "factory-signin.js": "78c1595488a0d68f4bd2b8a9614aecf8425e576d549f4fd8737dc5cf03d21286",
+    "styles.css": "a2e0b9455da66491305dd9421d187e9836cc984751fee62853622a3c417ff6a9"
+  },
+  "keepFiles": [
+    "gate.js"
+  ],
+  "exceptions": "see subx-factory EXCEPTIONS.md",
+  "fork": "room factory.js is a fork of v1.2.9 shared-shell sign-in; factory-signin.js is byte-exact from de14e544557c35239473ad2f12d794558ca20b61",
+  "stampedAt": "2026-11-12T06:26:17Z",
+  "masterRef": "subx-factory PR #58 @ de14e544557c35239473ad2f12d794558ca20b61 (FACTORY_RELEASE.json v1.2.9)"
+}
