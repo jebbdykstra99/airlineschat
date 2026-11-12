@@ -5,7 +5,7 @@
   "siteId": "airlineschat",
   "files": {
     "factory.js": "517d56cd0fce2a8a2fbcaa61882a89e0988fe16d1360eab42a44fdb881d8dc54",
-    "factory-signin.js": "0427ac92a3f672801964fdcf32002d301e2f85d6965f9de733b57bc4080bdb72",
+    "factory-signin.js": "51ce100803d5cc7270fbfa488841cb75594b8c0bf092ee41c28460c1d4105958",
     "styles.css": "a2e0b9455da66491305dd9421d187e9836cc984751fee62853622a3c417ff6a9"
   },
   "keepFiles": [
@@ -13,6 +13,6 @@
   ],
   "exceptions": "see subx-factory EXCEPTIONS.md",
   "fork": "room factory.js is a fork of v1.2.10 shared-shell sign-in, with the blocked-popup preload and SubX cat home link ported in; room-specific code is kept; factory-signin.js is byte-exact from bc90c00d84c5bf20d3bfb17afb42ba809e565d9a",
-  "stampedAt": "2026-11-12T18:31:47Z",
-  "masterRef": "subx-factory cursor/phone-cat-space-2026-11-12 @ 0931b06351a1dc68be00c16897a0465f907d0903 (FACTORY_RELEASE.json v1.2.10 pin factory.js sha256 92f1f39d16a17beb25e189e277fd66c118cbb9959db6de430db98d974e0e9915, 254995 B; room factory.js is a hand-ported fork, sha256 517d56cd0fce2a8a2fbcaa61882a89e0988fe16d1360eab42a44fdb881d8dc54, 212115 B). Phone cat light backing (#fff/#111, --cat 7.05rem); desktop color var(--nav-text,#fff)."
+  "stampedAt": "2026-11-12T20:19:39Z",
+  "masterRef": "subx-factory cursor/signin-popup-redirect-2026-11-12 @ 0f98fa1f8dc1fb2b81db3bf7e8e407fb43537a2e (FACTORY_RELEASE.json v1.2.10, factory-signin.js sha256 51ce100803d5cc7270fbfa488841cb75594b8c0bf092ee41c28460c1d4105958, 24583 B; factory.js sha256 517d56cd0fce2a8a2fbcaa61882a89e0988fe16d1360eab42a44fdb881d8dc54 unchanged). A rejected redirect result replaces the normal button block and keeps its failure message."
 }
