@@ -677,7 +677,9 @@
     if (Array.isArray(tokens.avatarColors) && tokens.avatarColors.length) COLORS = tokens.avatarColors.slice();
   }
 
+  function ensureSubxCat(){var a=document.querySelector('.subx-cat-link'),m,h,r,u='url(https://subx.it/assets/brand/cat-mask.png) center/contain no-repeat';if(!a){m=document.querySelector('.sidebar-brand .brand-mark');if(!m)return;a=document.createElement('a');a.href='https://subx.it/';a.className='subx-cat-link';a.setAttribute('aria-label','SubX home');a.style.cssText='display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;z-index:600;text-decoration:none;color:var(--nav-text,#fff)';a.innerHTML='<span style="width:28px;height:28px;background:currentColor;-webkit-mask:'+u+';mask:'+u+'"></span>';m.parentNode.insertBefore(a,m)}if(!ensureSubxCat.h)ensureSubxCat.h=a.parentNode;h=document.getElementById('hamburger');if(h&&innerWidth<=MOBILE_NAV_MQ){r=h.getBoundingClientRect();document.body.appendChild(a);a.style.position='fixed';a.style.top=r.top+'px';a.style.left=r.right+4+'px';a.style.background='var(--nav-bg,#111)';a.style.zIndex=600}else if(a){ensureSubxCat.h.appendChild(a);a.style.position=a.style.top=a.style.left=a.style.background=''}if(!ensureSubxCat.w){ensureSubxCat.w=1;addEventListener('resize',ensureSubxCat);addEventListener('load',ensureSubxCat)}}
   function applySiteChrome() {
+    ensureSubxCat();
     if (!site) return;
     var title = site.name || "airlineschat";
     var tag = site.tagline || 'Airline issue resolution. Delays, bags, refunds. Not official support.';
@@ -4324,6 +4326,8 @@
   }
 
   function wireEvents() {
+    ensureSubxCat();
+    ['pointerdown','touchstart'].forEach(function(v){document.addEventListener(v,function(e){try{if(e.target.closest('#auth-signin,#profile-signin-prompt-btn,#cv-google-login'))loadSigninModule()}catch(x){}},{passive:true});});
     document.addEventListener('click', function (e) {
       const addNest = e.target.closest('[data-nest-add]');
       if (addNest) {
