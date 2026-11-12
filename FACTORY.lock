@@ -4,7 +4,7 @@
   "room": "airlineschat",
   "siteId": "airlineschat",
   "files": {
-    "factory.js": "ea608584b223298e236e2fd381065c08d9a0603f793185b3ff637b361cdc55d5",
+    "factory.js": "517d56cd0fce2a8a2fbcaa61882a89e0988fe16d1360eab42a44fdb881d8dc54",
     "factory-signin.js": "0427ac92a3f672801964fdcf32002d301e2f85d6965f9de733b57bc4080bdb72",
     "styles.css": "a2e0b9455da66491305dd9421d187e9836cc984751fee62853622a3c417ff6a9"
   },
@@ -13,6 +13,6 @@
   ],
   "exceptions": "see subx-factory EXCEPTIONS.md",
   "fork": "room factory.js is a fork of v1.2.10 shared-shell sign-in, with the blocked-popup preload and SubX cat home link ported in; room-specific code is kept; factory-signin.js is byte-exact from bc90c00d84c5bf20d3bfb17afb42ba809e565d9a",
-  "stampedAt": "2026-11-12T18:14:52Z",
-  "masterRef": "subx-factory cursor/phone-cat-space-2026-11-12 @ d755c610b65e4c069a5609461f754151547dd6fa (FACTORY_RELEASE.json v1.2.10 pin factory.js sha256 25103bcb15e489d8e743df17248cd405e2889668d9eb15942f82036590844f94, 254994 B; room factory.js is a hand-ported fork, sha256 ea608584b223298e236e2fd381065c08d9a0603f793185b3ff637b361cdc55d5, 212114 B). Phone cat light backing (#fff/#111, --subx-cat-space 7.05rem)."
+  "stampedAt": "2026-11-12T18:31:47Z",
+  "masterRef": "subx-factory cursor/phone-cat-space-2026-11-12 @ 0931b06351a1dc68be00c16897a0465f907d0903 (FACTORY_RELEASE.json v1.2.10 pin factory.js sha256 92f1f39d16a17beb25e189e277fd66c118cbb9959db6de430db98d974e0e9915, 254995 B; room factory.js is a hand-ported fork, sha256 517d56cd0fce2a8a2fbcaa61882a89e0988fe16d1360eab42a44fdb881d8dc54, 212115 B). Phone cat light backing (#fff/#111, --cat 7.05rem); desktop color var(--nav-text,#fff)."
 }
