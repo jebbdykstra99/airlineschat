@@ -5,7 +5,7 @@
   "siteId": "airlineschat",
   "files": {
     "factory.js": "517d56cd0fce2a8a2fbcaa61882a89e0988fe16d1360eab42a44fdb881d8dc54",
-    "factory-more.js": "253bf7ed5bba2dfaccabd704b44b5d46dc8c0d9981dd2ac4c8910353f813dabc",
+    "factory-more.js": "6c31fe7d9af0477b74a977a25e432fdd5ee5700de8cf15d5391045186a08980e",
     "factory-signin.js": "51ce100803d5cc7270fbfa488841cb75594b8c0bf092ee41c28460c1d4105958",
     "styles.css": "a2e0b9455da66491305dd9421d187e9836cc984751fee62853622a3c417ff6a9"
   },
